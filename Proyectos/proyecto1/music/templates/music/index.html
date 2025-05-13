@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proyecto1</title>
+        <meta charset="utf-8"/>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Music App</h1>
+            </header>
+            <nav>
+                <h4 class="menu">Menú</h4>
+                <ul>
+                    <li class="menu"><a href="">Artistas</a></li>
+                    <li class="menu"><a href="">Albumes</a></li>
+                    <li class="menu"><a href="">Conciertos</a></li>
+                    <li class="menu"><a href="">Videos</a></li>
+                </ul>
+            </nav>
+            <section class="sec1">
+                <h2>Artistas</h2>
+                <ol>
+                    <li class="element">Los Jaivas</li>
+                    <li class="element">Red Hot Chilli peppers</li>
+                    <li class="element">Los Prisioneros</li>
+                    <li class="element">Slayer</li>
+                    <li class="element">The Beatles</li>
+                    <li class="element">Los Tres</li>
+                    <li class="element">Black Sabbath</li>
+                    <li class="element">Luis Jara</li>
+                    <li class="element">Led Zeppelin</li>
+                    <li class="element">La Ley</li>
+                </ol>
+            </section>
+            <section class="sec2">
+                <h2> Álbumes</h2>
+                    <table>
+                        <tr>
+                            <th>Artista</th>
+                            <th>Álbum</th>
+                            <th>Año</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Los Jaivas</td>
+                            <td>El Indio</td>
+                            <td>1975</td>
+                        </tr>
+                        <tr>
+                            <td>Álbum 2</td>
+                            <td>1980</td>
+                        </tr>
+                        <tr>
+                            <td>Álbum 3</td>
+                            <td>1985</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Los Jaivas</td>
+                            <td>Álbum 1</td>
+                            <td>1995</td>
+                        </tr>
+                        <tr>
+                            <td>Álbum 2</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>Álbum 3</td>
+                            <td>2005</td>
+                        </tr>
+                    </table>
+            </section>
+            <footer>
+                Copyright Python y la web 2025 Pontificia Universidad Catolica de Chile, <a href="">Clase Ejecutiva.</a>
+            </footer>
+        </div>
+    </body>
+</html>
