@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manufacturers</title>
+</head>
+<body>
+    <h1>Manufacturers</h1>
+    {% for manufacturers in manufacturers %}
+        <h2>{{manufacturers.name}}</h2>
+        {% for smartphone in manufacturers.smartphone_set.all %}
+            <h3>{{smartphone.name}}</h3>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
