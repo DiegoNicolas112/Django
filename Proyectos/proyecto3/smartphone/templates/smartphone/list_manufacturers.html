@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manufacturers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .manufacturer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .manufacturer h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .smartphone-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .smartphone-list li {
+            padding: 0.3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manufacturers</h1>
+    {% for manufacturer in manufacturers %}
+        <section class="manufacturer">
+            <h2>{{ manufacturer.name }}</h2>
+            {% if manufacturer.smartphone_set.all %}
+                <ul class="smartphone-list">
+                    {% for smartphone in manufacturer.smartphone_set.all %}
+                        <li>{{ smartphone.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No smartphones listed.</p>
+            {% endif %}
+        </section>
+    {% endfor %}
+</body>
+</html>

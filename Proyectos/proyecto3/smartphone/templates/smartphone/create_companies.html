@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block body %}
+    <h1>Create Company</h1>
+    <form id="company-form" action="{% url 'create_companies' %}" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+      <input type="submit" value="Save">
+    </form>
+{% endblock %}
+</html>
